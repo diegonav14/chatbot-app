@@ -6,6 +6,16 @@
   color: white;
   border-radius: 10px;
   font-size: 1rem;
+  overflow-y:scroll;
+}
+
+.form::-webkit-scrollbar {
+  display: none;
+}
+
+.form {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .inbox {

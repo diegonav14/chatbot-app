@@ -15,7 +15,16 @@ $(function () {
         url: "message.php",
         data: {value},
         success: function (response) {
-            console.log(response);
+            const templateReplay = `<div class="bot-inbox inbox">
+            <div class="icon">
+                <i class="bi bi-chat-left"></i>
+            </div>
+            <div class="msg-header">
+                <p class="mb-0">${response}</p>
+            </div>
+        </div>`;
+        $('.form').append(templateReplay);
+        $('.form').scrollTop($('.form')[0].scrollHeight);
         }
     });
 
